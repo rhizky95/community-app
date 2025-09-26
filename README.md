@@ -1,11 +1,3 @@
-
----
-
-# 📄 2. README.html (versi HTML penuh)
-
-Save ini sebagai `README.html` → bisa dibuka lewat browser sebagai 1 halaman dokumen.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
