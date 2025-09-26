@@ -1,99 +1,126 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+---
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# 📄 2. README.html (versi HTML penuh)
 
-## Description
+Save ini sebagai `README.html` → bisa dibuka lewat browser sebagai 1 halaman dokumen.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Community App Documentation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
+    h1,h2,h3 { color: #2c3e50; }
+    pre { background: #eee; padding: 10px; border-radius: 4px; }
+    code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+    .section { margin-bottom: 30px; }
+  </style>
+</head>
+<body>
+  <h1>🌐 Community App</h1>
+  <p>Aplikasi Komunitas Fullstack menggunakan <b>NestJS (Backend)</b>, 
+     <b>Next.js (Frontend)</b>, <b>TailwindCSS</b> untuk UI, dan <b>MySQL</b> untuk database.</p>
+  <p>Dilengkapi fitur: <b>Authentication, Posts, Comments, Likes, Admin Dashboard</b>.</p>
 
-## Project setup
+  <div class="section">
+    <h2>🚀 Setup Instructions</h2>
+    <h3>Clone Repository</h3>
+    <pre><code>git clone https://github.com/username/community-app.git
+cd community-app</code></pre>
 
-```bash
-$ npm install
-```
+    <h3>Backend (NestJS)</h3>
+    <pre><code>cd backend
+npm install
+npm run start:dev</code></pre>
 
-## Compile and run the project
+    <p>Konfigurasi DB di <code>app.module.ts</code>:</p>
+    <pre><code>TypeOrmModule.forRoot({
+  type: 'mysql',
+  host: '127.0.0.1',
+  port: 3306,
+  username: 'root',
+  password: '',
+  database: 'community',
+  autoLoadEntities: true,
+  synchronize: true, // hanya untuk DEV
+})</code></pre>
+    <p>Akses backend: <b>http://localhost:3000</b></p>
 
-```bash
-# development
-$ npm run start
+    <h3>Frontend (Next.js)</h3>
+    <pre><code>cd frontend
+npm install
+npm run dev</code></pre>
+    <p>Akses frontend: <b>http://localhost:3001</b></p>
+  </div>
 
-# watch mode
-$ npm run start:dev
+  <div class="section">
+    <h2>📡 API Documentation</h2>
+    <h3>🔐 Authentication</h3>
+    <ul>
+      <li><code>POST /auth/register</code> → Register user</li>
+      <li><code>POST /auth/login</code> → Login user (return JWT)</li>
+      <li><code>POST /auth/register-admin</code> → Register admin</li>
+    </ul>
+    <h3>📝 Posts</h3>
+    <ul>
+      <li><code>GET /posts</code> → ambil semua posts</li>
+      <li><code>GET /posts/:id</code> → detail post</li>
+      <li><code>POST /posts</code> → create post</li>
+    </ul>
+    <h3>💬 Comments</h3>
+    <ul>
+      <li><code>GET /comments/:postId</code></li>
+      <li><code>POST /comments/:postId</code></li>
+    </ul>
+    <h3>👍 Likes</h3>
+    <ul>
+      <li><code>POST /likes/post/:id</code></li>
+      <li><code>POST /likes/comment/:id</code></li>
+    </ul>
+    <h3>👑 Admin</h3>
+    <ul>
+      <li><code>GET /admin/analytics</code> → statistik global</li>
+      <li><code>DELETE /admin/posts/:id</code></li>
+      <li><code>DELETE /admin/comments/:id</code></li>
+    </ul>
+  </div>
 
-# production mode
-$ npm run start:prod
-```
+  <div class="section">
+    <h2>✅ Implemented Features</h2>
+    <h3>Backend</h3>
+    <ul>
+      <li>Authentication (JWT)</li>
+      <li>Posts CRUD + filter</li>
+      <li>Comments</li>
+      <li>Likes toggle</li>
+      <li>Admin analytics & moderation</li>
+    </ul>
+    <h3>Frontend</h3>
+    <ul>
+      <li>Modern UI dengan TailwindCSS</li>
+      <li>Responsive Navbar + Hamburger Menu</li>
+      <li>Post list dengan card grid</li>
+      <li>Post detail + bubble comments</li>
+      <li>Form New Post</li>
+      <li>Admin Dashboard dengan stat cards</li>
+    </ul>
+  </div>
 
-## Run tests
+  <div class="section">
+    <h2>👨‍💻 Tech Stack</h2>
+    <ul>
+      <li><b>Backend:</b> NestJS, TypeORM, MySQL</li>
+      <li><b>Frontend:</b> Next.js, SWR, Axios, TailwindCSS</li>
+      <li><b>Auth:</b> JWT</li>
+    </ul>
+  </div>
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-"# community-app" 
+  <footer>
+    <hr/>
+    <p>✍️ Dibuat untuk keperluan Fullstack Coding Test (NestJS + Next.js + Tailwind + MySQL)</p>
+  </footer>
+</body>
+</html>
