@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Community App Documentation</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; color: #333; }
-    h1,h2,h3 { color: #2c3e50; }
-    pre { background: #eee; padding: 10px; border-radius: 4px; }
-    code { background: #eee; padding: 2px 4px; border-radius: 3px; }
-    .section { margin-bottom: 30px; }
-  </style>
-</head>
 <body>
   <h1>🌐 Community App</h1>
   <p>Aplikasi Komunitas Fullstack menggunakan <b>NestJS (Backend)</b>, 
@@ -23,12 +12,11 @@
     <pre><code>git clone https://github.com/username/community-app.git
 cd community-app</code></pre>
 
-    <h3>Backend (NestJS)</h3>
-    <pre><code>cd backend
+<h3>Backend (NestJS)</h3><pre><code>cd backend
 npm install
 npm run start:dev</code></pre>
 
-    <p>Konfigurasi DB di <code>app.module.ts</code>:</p>
+<p>Konfigurasi DB di <code>app.module.ts</code>:</p>
     <pre><code>TypeOrmModule.forRoot({
   type: 'mysql',
   host: '127.0.0.1',
@@ -41,7 +29,15 @@ npm run start:dev</code></pre>
 })</code></pre>
     <p>Akses backend: <b>http://localhost:3000</b></p>
 
-    <h3>Frontend (Next.js)</h3>
+<h3>Setting Database (MySql)</h3>
+    <pre><code>1. Import file community.sql
+2. Buka Aplikasi Server MySql (Contoh Xammp)
+3. Buka Nyalakan Server Xampp
+4. Buka Phpmyadmin di Browser
+5. Buat Database Baru 'community'
+6. Lalu Import community.sql ke Database community</code></pre>
+
+<h3>Frontend (Next.js)</h3>
     <pre><code>cd frontend
 npm install
 npm run dev</code></pre>
