@@ -37,18 +37,18 @@ npm run start:dev</code></pre>
     <p>Akses backend: <b>http://localhost:3000</b></p>
 
 <h3>Setting Database (MySql)</h3>
-    <pre><code>1. Import file community.sql
-2. Buka Aplikasi Server MySql (Contoh Xammp)
-3. Buka Nyalakan Server Xampp
-4. Buka Phpmyadmin di Browser
-5. Buat Database Baru 'community'
-6. Lalu Import community.sql ke Database community</code></pre>
+    <pre><code>1. Buka Aplikasi Server MySql (Contoh Xammp)
+2. Buka Nyalakan Server Xampp
+3. Buka Phpmyadmin di Browser
+4. Buat Database Baru 'community'
+5. Lalu Import community.sql ke Database community</code></pre>
 
 <h3>Frontend (Next.js)</h3>
     <pre><code>cd frontend
 npm install
-npm run dev</code></pre>
-    <p>Akses frontend: <b>http://localhost:3001</b></p>
+npm run dev -- -p 3001</code></pre>
+<p>pakai port 3001 karena portnya harus berbeda dengan backend yang pakai port 3000</p>  
+<p>Akses frontend: <b>http://localhost:3001</b></p>
   </div>
 
   <div class="section">
