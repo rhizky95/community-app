@@ -8,8 +8,15 @@
 
   <div class="section">
     <h2>🚀 Setup Instructions</h2>
-    <h3>Clone Repository</h3>
-    <pre><code>git clone https://github.com/username/community-app.git
+    
+<h3>First Step</h3>
+    <pre><code>1. Buat folder di local disk komputer
+2. Buat folder community/community-app
+3. Buka folder tersebut yang akan dijadikan tempat project
+4. Buka CMD</code></pre>
+    
+<h3>Clone Repository</h3>
+    <pre><code>git clone https://github.com/rhizky95/community-app.git
 cd community-app</code></pre>
 
 <h3>Backend (NestJS)</h3><pre><code>cd backend
